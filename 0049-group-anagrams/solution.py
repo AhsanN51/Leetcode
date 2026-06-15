@@ -4,14 +4,11 @@ class Solution(object):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        dic={}
-        for st in strs:
-            sl=list(st)
-            sl.sort()
-            s="".join(sl)
-            print(st)
-            if s in dic:
-                dic[s].append(st)
+        fd1={}
+        for v in strs:
+            isorted=''.join(sorted(v))
+            if isorted in fd1:
+                fd1[isorted].append(v)
             else:
-                dic[s]=[st]
-        return dic.values()            
+                fd1[isorted]=[v]
+        return list(fd1.values())
