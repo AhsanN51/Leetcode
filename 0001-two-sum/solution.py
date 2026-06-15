@@ -5,13 +5,10 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        dic={}
-        for i in range(len(nums)):
-            res=target-nums[i]
-            if res in dic:
-                return [dic[res],i]
-            else:
-                dic[nums[i]]=i
-
-
+        s ={}
+        for i,v in enumerate(nums):
+            n=target-v
+            if n in s:
+                return [i,s[n]]
+            s[v]=i
 
