@@ -5,19 +5,21 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        f1={}
-        for c in s:
-            if c in f1:
-                f1[c]+=1
+        fds={}
+        for i in s:
+            if i in fds:
+                fds[i]+=1
             else:
-                f1[c]=1
-        for c in t:
-            if c in f1:
-                f1[c]-=1
+                fds[i]=1
+        fdt={}
+        for i in t:
+            if i in fdt:
+                fdt[i]+=1
             else:
-                return False
-        for val in f1.values():
-            if val!=0:
-                return False
-        return True
-
+                fdt[i]=1
+        if len(fds)!=len(fdt):
+            return False
+        if fds==fdt:
+            return True
+        else:
+            return False
