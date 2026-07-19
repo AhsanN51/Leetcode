@@ -4,10 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        n=len(nums)
-        start=0
-        for i in range(1,n):
-            if nums[i]!=nums[start]:
-                nums[start+1]=nums[i]
-                start+=1
-        return start+1
+        p=1
+        for i in range(1,len(nums)):
+            if nums[i]!=nums[i-1]:
+                nums[p]=nums[i]
+                p+=1
+            else:
+                continue
+        return p
