@@ -4,10 +4,10 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        l=len(nums)
-        ans=[]
-        ans.append(nums[0])
-        for i in range (1,l):
-            x= ans[i-1]+nums[i]
-            ans.append(x)
-        return ans
+        x=0
+        a=[]
+        for i in nums:
+            x+=i
+            a.append(x)
+        return a
+        
