@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sync Submissions
-        uses: jasonwryan/leetcode-sync@v1.1.2 # Or a similar verified marketplace action
+        uses: joshcai/leetcode-sync@v1.7 # Or a similar verified marketplace action
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
