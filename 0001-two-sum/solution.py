@@ -7,8 +7,9 @@ class Solution(object):
         """
         dic={}
         for i in range(len(nums)):
-            v=target-nums[i]
-            if v in dic:
-                return [i,dic[v]]
+            dif=target-nums[i]
+            if dif in dic:
+                return [dic[dif],i]
             else:
                 dic[nums[i]]=i
+            #print(dic)
